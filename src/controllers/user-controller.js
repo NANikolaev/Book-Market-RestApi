@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const userService = require("../services/user-service")
 
+router.get('/',(req,res)=>{
+  res.send(<h1 style={'color:red'}>You Made it !!!!!!!</h1>)
+})
 
 router.post('/users/login', (req, res, next) => {
   let userData = req.body
