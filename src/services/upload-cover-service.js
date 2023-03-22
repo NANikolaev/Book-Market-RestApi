@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 
 const KEYPATH=path.resolve( "credentials.json");
 const SCOPES = ['https://www.googleapis.com/auth/drive'];
-const GOOGLEFOLDER='https://drive.google.com/file/d/';
+const GOOGLEFOLDER='https://drive.google.com/uc?id=';
 
 const auth = new google.auth.GoogleAuth({
     keyFile: KEYPATH,
