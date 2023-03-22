@@ -7,7 +7,7 @@ module.exports=(server)=>{
     server.use(cookieParser());
     server.use(express.urlencoded({ extended: true }));
     server.use(cors({
-        origin:'http://localhost:3000',
+        origin:"*", //'http://localhost:3000',
         methods:'*',
         credentials:true,
         allowedHeaders:"*",
