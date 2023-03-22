@@ -10,10 +10,10 @@ router.route("/books/catalog")
 
 .post((req,res,next)=>{
 
-  //  let bookData={...req.body,owner:req.user.id}
-   // bookService.createBook(bookData)
-   // .then(book=>res.json(book))
-   // .catch(err=>next(err))
+    let bookData={...req.body,owner:req.user.id}
+    bookService.createBook(bookData)
+    .then(book=>res.json(book))
+    .catch(err=>next(err))
 
 })
 
