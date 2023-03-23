@@ -57,7 +57,6 @@ let bookSchema=new mongoose.Schema({
  bookSchema.pre("save",function(next){
        this.title=this.title.trim()
        this.author=this.author.trim()
-       this.image=this.image.trim()
        this.description=this.description.trim()
        next()
  })
