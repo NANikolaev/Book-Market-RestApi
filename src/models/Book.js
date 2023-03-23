@@ -20,9 +20,10 @@ let bookSchema=new mongoose.Schema({
      required:[true,'Author is required'],
     },
     image:{
-     type:String,
-     required:[true,'Image Url is required'],
-     validate:[/^[http?s]+:\/\//,'Invalid Url adress']
+     type:Object,
+     required:[true,'Image is required'],
+     name:{type:String},
+     url:{type:String,validate:[/^[http?s]+:\/\//,'Invalid Url adress']}   
     },
     price:{
      type:String,

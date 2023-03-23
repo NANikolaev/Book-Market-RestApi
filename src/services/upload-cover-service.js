@@ -4,7 +4,7 @@ const { google } = require('googleapis');
 
 const KEYPATH=path.resolve( "credentials.json");
 const SCOPES = ['https://www.googleapis.com/auth/drive'];
-const GOOGLEFOLDER='https://drive.google.com/uc?id=';
+const GOOGLELINK='https://drive.google.com/uc?id=';
 
 const auth = new google.auth.GoogleAuth({
     keyFile: KEYPATH,
@@ -20,7 +20,7 @@ const uploadCover= async(file)=>{
     requestBody:{name:file.originalname,parents:['1yopN5pkFVwpqrf3iibzkdU5zQA8DDaeh']},
     fields:'id,name'
    });
-   return GOOGLEFOLDER+data.id
+   return {name:data.name,url:GOOGLELINK+data.id}
    
 };
 
