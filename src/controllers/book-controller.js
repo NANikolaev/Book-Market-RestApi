@@ -24,7 +24,7 @@ router.route('/book/:bookId')
     let bookId=req.params.bookId
     let book=req.body
     bookService.updateBook(bookId,book)
-    .then(newBook=>{res.json(newBook)})
+    .then(newBook=>res.json(newBook))
     .catch(err=>next(err))
 })
 
